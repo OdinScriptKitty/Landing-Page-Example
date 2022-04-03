@@ -9,7 +9,10 @@
 <body>    
 <header>
     <inner-column>
-        <h1>Heading</h1>
+    <div class="header">
+        <div class="header-logo">Heading</div>
+    <div class="header-links"><a>Home</a><a>Contact Us</a><a>FAQs</a>
+        </div>
     </inner-column>  
 </header>
 <main>
@@ -37,30 +40,99 @@
         </inner-column>    
     </section>
 
-    <section>
+    <section class="product">
         <inner-column>
-            <h2>Pick Product</h2>
+    <h2 class="product-title">Product Selection</h2>
+            
+    
+    <product-grid>
+            <div>        
+            <ul class="product-list">
+                <li class="product">  
+                    <product-card>
+                            <picture>
+                                <img src="./landscape-image.png">
+                             </picture>
+        
+                             <text-content>
+        
+                            <h1 class="calm-voice">This website is awesome</h1>
+                             </text-content>
+                    </product-card>
+                
+                </li>
+                <li> <product-card>
+        
+                    <picture>
+                        <img src="./landscape-image.png">
+                     </picture>
+
+                     <text-content>
+
+                    <h1 class="calm-voice">This website is awesome</h1>
+
+            </product-card></li>
+                <li> <product-card>
+        
+                    <picture>
+                        <img src="./landscape-image.png">
+                     </picture>
+
+                     <text-content>
+
+                    <h1 class="calm-voice">This website is awesome</h1>
+
+            </product-card></li>
+                <li> <product-card>
+        
+                    <picture>
+                        <img src="./landscape-image.png">
+                     </picture>
+
+                     <text-content>
+
+                    <h1 class="calm-voice">This website is awesome</h1>
+
+                    </product-card></li>
+                </ul>
+            </product-grid>
         </inner-column>    
     </section>
 
-    <section>
-        <inner-column>
-            <h2>Quote</h2>
-        </div>    
+        <wide-column>
+    <section class="quote-section">
+        
+            <div class="quote">"The only true wisdom is in knowing you know nothing."
+            <div class="quote id">-Socrates</div>
+        </div>
+        
     </section>
+        </wide-column>
 
-    <section>
+
+
+
+
+
+    <section class="c2a">
         <inner-column>
-            <h2>Call To Action</h2>
+            <div class="blue-box">
+                <ol>
+                <div class="big-text"><li><strong>Call To Action! It's time!</strong><li></div>
+                <div class="small-text"><li>Sign up for our product by clicking that button right over there!</li></div>
+                </ol>
+        
+            <button class="signup">Sign Up</button>
+        </div>
         </inner-column>    
     </section>
     
 </main>
 
 <footer>
-    <section>
         <inner-column>
-            <h2>footer</h2>
+            <section class="copyright">
+            <p>Copyright Ⓒ Nobody 3055</p>
         </inner-column>    
     </section>
 </footer>

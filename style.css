@@ -2,10 +2,24 @@
 
 /*SETTINGS*/
 html {
-    --black: #333;
-    --white: rgb(229,231,235);
-    --color: rgb(60,130,246);
-    --dark: rgb(31, 41, 55);
+    --maintext: #f9faf8 ;
+    --secondarytext: grey;
+    --button: rgb(60,130,246);
+    --buttoncolor: #3882f6;
+   
+   
+   
+   
+    
+    --headerfooter: #1f2937;
+    --quotebackround: #e5e7eb;
+        --quote: black;
+   
+    
+  
+    --bodytext: #1f2937 ;
+    
+
     
 }
 
@@ -13,6 +27,11 @@ html {
 /*SETUP (also great setup for every page)s*/
 *{
     box-sizing: border-box;
+}
+
+header {
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
 picture{
@@ -44,14 +63,14 @@ p a, li a {
 
 
 
-/*DEV STYLES*/
+/* DEV STYLES
 
-/* body * {
+body * {
     border: 1px soliid blue;
     padding: 2px;
 }
 
-inner-column {
+inner-column, wide-column {
     border: 8px solid orange;
 }
 image-holder{
@@ -64,7 +83,10 @@ header, footer, main{
 
 section{
     border: 8px solid cyan;
-} */
+}
+ */
+
+
 
 /*STRUCTURE */
 body{
@@ -81,7 +103,7 @@ inner-column {
     display: block;
     padding: 10px;
     width: 98%;
-    max-width: 900px;
+    max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     /**/
@@ -90,8 +112,19 @@ inner-column {
 }
 
 header inner-column {
-    padding: 10px;
+    padding: 30px;
 
+}
+
+.c2a {
+    background-color: var(--section4);
+}
+
+.copyright{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: var(--secondarytext);
 }
 
 /*TYPOGRAPHY*/
@@ -100,9 +133,8 @@ header inner-column {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.8;
-    color: #f9faf8;
+    color: var(--maintext);
 }
-
 @media(min-width:700px) {
     .loud-voice {
         font-family: sans-serif ;
@@ -114,11 +146,18 @@ header inner-column {
 }
 
 
+.product-title{
+    color: var(--bodytext);
+    font-size: 36px;
+    font-weight: 900;
+}
+
+
 .calm-voice {
     font-family: sans-serif;
     font-size: 18px;
     line-height: 1.8rem;
-    color: #e5e7eb;
+    color: var(--secondarytext);
 }
 
 
@@ -126,15 +165,74 @@ header inner-column {
 /*COMPONENTS*/
 
 
-.button{
+.button, .signup{
     font-family: sans-serif;
     display: inline-block;
-    background-color: var(--color);
-    color: white;
+    background-color: var(--buttoncolor);
+    color: var(--maintext);
     font-size: 1.2rem;
     padding: 0.6em 1em;
     border-radius: 6px;
+    border: 2px solid var(--maintext);
+
 }
+
+
+
+.quote-section {
+    background-color: var(--quotebackround);
+    font-size: 36px;
+    width: 100%;
+    height: 200px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+} 
+.quote{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--quote);
+}
+.quote.id{
+    display: flex;
+    justify-content: right;
+    font-style: none;
+    font-weight: 700;
+    
+    }
+
+
+
+    
+   
+
+.blue-box{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--buttoncolor);
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 60px;
+        border-radius: 6px;
+        border: 2px solid var(--maintext);
+        
+        
+}
+.big-text {
+    color: var(--maintext);
+    font-weight: 900;
+    font-size: 24px;
+}
+.small-text{
+    color: var(--maintext);
+    font-size: 18px;
+}
+
 
 
 
@@ -167,6 +265,7 @@ image-holder text-content .button {
 
 
 
+
 @media (min-width:700px) {
     image-holder {
         flex-direction: row-reverse;
@@ -177,14 +276,61 @@ image-holder text-content .button {
        flex-basis: 50%;
         
     }
+/*Perfect Grid Setup*/
 
-.welcome {
-    background-color:var(--dark);
-    color: var(--white)
+    product-grid .product-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-gap:1em;
+    }
+       
+.header{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.header-logo{
+    color: var(--maintext);
+    font-size: 48px;
+}
+.header-links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--secondarytext);
+    font-size: 18px;
+    float: right;
+    position: relative;
+    margin-top: 15px;
+}
+
+.welcome, header, footer {
+    background-color:var(--headerfooter);
+    display: block;
 }
 
 .welcome .button {
-    background-color:var(--color);
-    color: var(--white)
+    background-color:var(--button);
+    color: var(--maintext)
 }
 
+
+.product-title{
+    padding-bottom: 30px;
+}
+.product {
+    color: var(--secondarytext);
+    text-align: center;
+    
+}
+
+
+wide-column {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--quotebackround);
+    width: 100%;
+}
